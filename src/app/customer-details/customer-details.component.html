@@ -1,0 +1,11 @@
+<div class="customer-details" *ngIf="customer()">
+    <h2 class="customer-name">{{ customer().name }}</h2>
+    <p class="customer-email">Email: {{ customer().email }}</p>
+
+    <h3>Orders</h3>
+    <ul class="customer-order-list">
+        @for (order of orders(); track $index) {
+            <li>{{ order.product }}</li>
+        }
+    </ul>
+</div>

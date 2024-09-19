@@ -1,0 +1,8 @@
+@for (customer of customers(); track $index) {
+<div class="customer-list-item">
+    <h3 (click)="viewCustomerDetails(customer.id)">{{ customer.name }}</h3>
+    @if (currId == customer.id) {
+    <router-outlet></router-outlet>
+    }
+</div>
+}
